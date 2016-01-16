@@ -31,6 +31,10 @@ class Product
     @@products.find { |el| el.title == title_to_find }
   end
 
+  def decrement_stock_by(quantity)
+    @stock -= quantity
+  end
+
   private
 
   def add_to_products
