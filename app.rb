@@ -64,3 +64,31 @@ puts transaction2.product == nanoblock # Should return true
 
 # walter.purchase(firehouse)
 # Should return OutOfStockError: 'LEGO Firehouse Headquarter' is out of stock.
+
+puts
+puts "New Feature 1 - Product.items_to_reorder(threshold)"
+puts "- Will tell you all products that need to be reordered if their quantity <= threshold value"
+reorder_item = Product.items_to_reorder(0)
+puts reorder_item.inspect # Should show "LEGO Firehouse Headquarter"
+puts
+
+reorder_item = Product.items_to_reorder(25)
+puts reorder_item.inspect # Should show "Nano Block Empire State Building", "LEGO Firehouse Headquarter"
+puts
+
+puts
+puts "New Feature 2 - find_all_by_customer(customer)"
+puts "- Will tell you all transactions for a given customer"
+puts
+
+julia = Customer.find_by_name("Julia Van Cleve")
+
+lego = Product.find_by_title("LEGO Iron Man vs. Ultron")
+
+Transaction.new(julia, lego)
+Transaction.new(walter, nanoblock)
+Transaction.new(julia, nanoblock)
+
+
+puts Transaction.find_all_by_customer(julia).inspect
+puts

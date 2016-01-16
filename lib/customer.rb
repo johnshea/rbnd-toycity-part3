@@ -18,7 +18,7 @@ class Customer
   end
 
   def self.find_by_name(name_to_find)
-    @@customers.first { |el| el.name == name_to_find}
+    @@customers.find { |el| el.name == name_to_find}
   end
 
   def purchase(product)

@@ -35,6 +35,10 @@ class Product
     @stock -= quantity
   end
 
+  def self.items_to_reorder(threshold)
+    @@products.find_all { |el| el.stock <= threshold }
+  end
+
   private
 
   def add_to_products

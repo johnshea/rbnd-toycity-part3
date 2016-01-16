@@ -1,0 +1,20 @@
+How long did you spend working on this project?
+
+- 3.0 hours
+
+What was the most rewarding challenge you conquered?
+
+- Finding and figuring out how to use methods none?, find, and find_all
+
+What two additional features did you build? Why?
+
+- Product class method - Product.items_to_reorder(threshold) - Returns an array of products that need to be reordered if their quantity <= threshold value
+  - Why? Makes it easy to know what to reorder when restocking the store
+
+- Transaction class method - Transaction.find_all_by_customer(customer) - Returns an array of all transactions for the customer
+  - Why? Can quickly see what products a customer is buying and how many things they have purchased
+
+Where do you still have room to grow?
+
+- Commit more things to memory so I don't have to refer to the docs as often
+- Learn more methods that are unique to Ruby to make my code more efficient

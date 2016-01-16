@@ -22,4 +22,8 @@ class Transaction
   def self.find(index)
     @@transactions[index-1]
   end
+
+  def self.find_all_by_customer(customer)
+    @@transactions.find_all { |el| el.customer == customer }
+  end
 end
