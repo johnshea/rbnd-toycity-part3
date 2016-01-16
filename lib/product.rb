@@ -8,7 +8,7 @@ class Product
     if @@products.none? { |el| el.title == @title }
       add_to_products
     else
-      raise DuplicateProductError, "#{self.title} already exists."
+      raise DuplicateProductError, "'#{self.title}' already exists."
     end
   end
 
