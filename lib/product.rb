@@ -19,6 +19,10 @@ class Product
     @stock > 0
   end
 
+  def self.in_stock
+    @@products.find_all { |el| el.in_stock? }
+  end
+
   def self.all
     @@products
   end
