@@ -18,4 +18,8 @@ class Transaction
   def self.all
     @@transactions
   end
+
+  def self.find(index)
+    @@transactions[index-1]
+  end
 end
